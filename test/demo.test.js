@@ -3,10 +3,10 @@
 
 require('chromedriver');
 const { Builder, By } = require('selenium-webdriver');
-const { Eyes, ClassicRunner, Target, RectangleSize } = require('@applitools/eyes-selenium');
+const { Eyes, ClassicRunner, Target, RectangleSize, BatchInfo} = require('@applitools/eyes-selenium');
 
 describe('DemoApp - ClassicRunner', function () {
-  let runner, eyes, driver;
+  let runner, eyes, driver, batchInfo, batchId;
 
   beforeEach(async () => {
     // Initialize the Runner for your test.
@@ -14,6 +14,15 @@ describe('DemoApp - ClassicRunner', function () {
 
     // Initialize the eyes SDK (IMPORTANT: make sure your API key is set in the APPLITOOLS_API_KEY env variable).
     eyes = new Eyes(runner);
+
+    batchInfo = new BatchInfo("TeamCity Batch")
+
+    batchId = process.env.APPLITOOLS_BATCH_ID
+    if (batchId != null) {
+      batchInfo.setId(batchId)
+    }
+
+    eyes.setBatch(batchInfo)
 
     // Use Chrome browser
     driver = await new Builder()
