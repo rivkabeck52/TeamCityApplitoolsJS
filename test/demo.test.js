@@ -23,6 +23,7 @@ describe('DemoApp - ClassicRunner', function () {
     }
 
     eyes.setBatch(batchInfo)
+    eyes.setApiKey(process.env.APPLITOOLS_API_KEY)
 
     // Use Chrome browser
     driver = await new Builder()
