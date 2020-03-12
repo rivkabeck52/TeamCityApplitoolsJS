@@ -26,6 +26,8 @@ describe('DemoApp - ClassicRunner', function () {
 
     apiKey = process.env.APPLITOOLS_API_KEY
 
+    console.log(apiKey)
+    // console.log(eyes.)
     await eyes.setApiKey(apiKey)
 
     // Use Chrome browser
