@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "",
   "scripts": {
-    "test": "mocha --no-timeouts \"test/*.test.js\""
+    "test": "mocha --no-timeouts \"test/demo.test.js\""
   },
   "license": "ISC",
   "dependencies": {
