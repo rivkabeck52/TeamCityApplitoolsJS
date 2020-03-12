@@ -29,7 +29,7 @@ describe('DemoApp - ClassicRunner', function () {
     console.log(apiKey)
     // console.log(eyes.)
     await eyes.setApiKey(apiKey)
-    await eyes.setServerUrl("https://testeyesapi.applitools.com")
+    // await eyes.setServerUrl("https://testeyesapi.applitools.com")
 
     // Use Chrome browser
     driver = await new Builder()
