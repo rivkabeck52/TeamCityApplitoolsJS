@@ -17,12 +17,15 @@ describe('DemoApp - ClassicRunner', function () {
 
     batchInfo = new BatchInfo("TeamCity Batch")
 
-    batchId = process.env.APPLITOOLS_BATCH_ID
-    if (batchId != null) {
-      batchInfo.setId(batchId)
-    }
+    // batchId = process.env.APPLITOOLS_BATCH_ID
+    // if (batchId != null) {
+    //   batchInfo.setId(batchId)
+    // }
 
-    eyes.setBatch(batchInfo)
+    // eyes.setBatch(batchInfo)
+
+    eyes.setBatch(process.env.APPLITOOLS_BATCH_NAME, process.env.APPLITOOLS_BATCH_ID);
+
 
     apiKey = process.env.APPLITOOLS_API_KEY
 
