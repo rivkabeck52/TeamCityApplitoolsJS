@@ -31,6 +31,7 @@ describe('DemoApp - ClassicRunner', function () {
     console.log(apiKey)
     // console.log(eyes.)
     await eyes.setApiKey("mjaS7Q8z3EREsWvYd9otuGQqdk5PyC97sLwIDNNumKEE110")
+    
     // await eyes.setApiKey("grOcWt0gbDg5wahDUUgd102wxMehgIBtxZJKkR7NXcP108A110")
     // await eyes.setServerUrl("https://test2eyesapi.applitools.com")
 
