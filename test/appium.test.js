@@ -1,6 +1,8 @@
 
 'use strict';
 
+var apiKey = "ak49snv03mv;a#2ncldpnodlx@";
+
 require('chromedriver');
 var wd = require('selenium-webdriver'),
 desiredCaps = {
